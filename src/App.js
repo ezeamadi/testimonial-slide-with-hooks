@@ -39,17 +39,37 @@ function App() {
     })
   }
 
+  const setUpdate = (e) => {
+    // const { currentCharacterHobbies: hobbies, characterIndex: i } = character;
+
+    console.log(e.value)
+    
+    // const hobbies = event.target.value
+    // console.log(hobbies)
+
+    // hobbies.split(", ").map(hobby => console.log(hobby))
+    // if (hobbies !== text) {
+    //   console.log(text)
+    // }
+
+    // setCharacter({
+    //     characterIndex: i,
+    //     currentCharacterHobbies: text,
+    //   })
+  }
+
   return (
     <React.Fragment>
       <CharacterCard {...Characters[character.characterIndex]}
         prevClick = {() => handlePrevClick(character.characterIndex-1)}
-        nextClick = {() => handleNextClick(character.characterIndex+1)} 
+        nextClick={() => handleNextClick(character.characterIndex + 1)} 
+        setUpdate = {setUpdate}
       />
 
       <MuiThemeProvider>
         <div>
           <Search
-            index = {character.characterIndex}
+            index={character.characterIndex}
             hobbies={character.currentCharacterHobbies}
           />
         </div>

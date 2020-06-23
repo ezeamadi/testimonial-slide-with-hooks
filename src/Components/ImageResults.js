@@ -73,7 +73,12 @@ function ImageResults(props) {
                 open={isOpen.open}
                 onRequestClose={handleClose}
             >
-                <img src={isOpen.currentImg} alt="" style={{ width: "100%" }}/>
+                <img
+                    src={isOpen.currentImg}
+                    alt=""
+                    style={{ width: "100%" }}
+                />
+                
             </Dialog>
         </div>
     );

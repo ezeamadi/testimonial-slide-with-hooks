@@ -3,22 +3,29 @@ import '../App.css'
 import IconNext from '../images/icon-next.svg'
 import IconPrevious from '../images/icon-prev.svg'
 
-const CharacterCard = ({ id, testimony, hobbies, name, position, image, nextClick, prevClick }) => {
+const CharacterCard = ({ setUpdate, id, testimony, hobbies, name, position, image, nextClick, prevClick }) => {
   
   return (
     <div key={id}>
       <div className='container flex col'>
         <div className='card flex row' id='card-tanya'>
           <div className='card__info flex col'>
+            
             <p className='card__desc' id='desc-tanya'>
               {testimony}
             </p>
+
             <p className='card__desc' id='desc-tanya'>
               <strong>
                 <em>Hobbies: </em>
               </strong>
-              {hobbies}
+              <input
+                type="text"
+                value={hobbies}
+                onChange = {(event) => setUpdate(event.target)}
+              />
             </p>
+
             <p className='card__details flex row'>
               <span className='card__details__name' id='name-tanya'>
                 {name}
@@ -27,6 +34,7 @@ const CharacterCard = ({ id, testimony, hobbies, name, position, image, nextClic
                 {position}
               </span>
             </p>
+
           </div>
 
           <div className='card__imgs flex col'>

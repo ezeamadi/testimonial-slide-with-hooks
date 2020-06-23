@@ -32,7 +32,6 @@ function Search(props) {
 	useEffect(() => {
 		async function searchHobbies() {
 			const { hobbies } = props;
-			console.log(hobbies)
 
 			if (hobbies.length === 0) {
 				setImages([]);
