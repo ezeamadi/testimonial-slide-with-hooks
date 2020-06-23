@@ -48,7 +48,7 @@ function App() {
 
       <MuiThemeProvider>
         <div>
-          <Search hobbies={character.currentCharacterHobbies} />
+          <Search hobbies = {character.currentCharacterHobbies} />
         </div>
       </MuiThemeProvider>
     </React.Fragment>

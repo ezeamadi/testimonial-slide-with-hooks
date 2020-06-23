@@ -42,7 +42,7 @@ function ImageResults(props) {
                             </span>
                         }
                         actionIcon={
-                            <IconButton onClick={()=>/*this was removed from handleopen*/{handleOpen(img.largeImageURL)}}>
+                            <IconButton onClick={()=>{handleOpen(img.largeImageURL)}}>
                                 <ZoomIn color="white" />
                             </IconButton>
                         }

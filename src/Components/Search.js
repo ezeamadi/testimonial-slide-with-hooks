@@ -3,14 +3,13 @@ import ImageResults from "./ImageResults"
 import { searchRequest } from '../apiRequests';
 
 function Search(props) {
-	const [images, setImages] = useState([])
+	const [images, setImages] = useState([]);
 
 	const searchHobbies = async () => {
 		const { hobbies } = props;
 
-		if(hobbies.length === 0) {
-			setImages({ images: []});
-
+		if (hobbies.length === 0) {
+			setImages([]);
 			return;
 		}
 
@@ -23,7 +22,7 @@ function Search(props) {
 		const response = await Promise.all(requests);
 		const images = response.flatMap(res => res.slice(0, 5));
 
-		setImages({ images })
+		setImages(images)
 	};
 
 	useEffect(() => {
@@ -37,9 +36,10 @@ function Search(props) {
 	// });
 	
 	return (
-		<React.Fragment>
-			{images.length > 0 ? (<ImageResults images={images}/>) : null}
-		</React.Fragment>
+		<div>
+			{console.log(images)}
+			{images.length > 0 ? (<ImageResults images={images} />) : null}
+		</div>
 	);
 }
 
