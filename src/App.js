@@ -42,13 +42,16 @@ function App() {
   return (
     <React.Fragment>
       <CharacterCard {...Characters[character.characterIndex]}
-        prevClick = {handlePrevClick}
-        nextClick = {handleNextClick} 
+        prevClick = {() => handlePrevClick(character.characterIndex-1)}
+        nextClick = {() => handleNextClick(character.characterIndex+1)} 
       />
 
       <MuiThemeProvider>
         <div>
-          <Search hobbies = {character.currentCharacterHobbies} />
+          <Search
+            index = {character.characterIndex}
+            hobbies={character.currentCharacterHobbies}
+          />
         </div>
       </MuiThemeProvider>
     </React.Fragment>

@@ -9,7 +9,7 @@ const characters = [
         testimony: "I've been interested in coding for a while but never taken the jump, until now. I couldnt recommend this course enough. I'm now in the job of my dreams and so excited about the future",
         image: Tanya,
         position: "UX Engineer",
-        hobbies: "cars, dogs, photography"
+        hobbies: "photography, cars, dogs"
     },
     {
         id: 2,
